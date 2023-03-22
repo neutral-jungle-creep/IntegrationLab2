@@ -13,6 +13,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	apiV1 := router.Group("/api/v1")
 	{
 		apiV1.GET("/faculties", h.getFaculties)
+		apiV1.GET("/groups", h.getGroups)
+		apiV1.GET("/lessons", h.getLessons)
 	}
 
 	return router
